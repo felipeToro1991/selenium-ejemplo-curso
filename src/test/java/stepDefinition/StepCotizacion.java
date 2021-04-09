@@ -1,26 +1,22 @@
 package stepDefinition;
 
-import constants.Navegador;
 import cucumber.api.java.en.Given;
 import drivers.DriverContext;
 import org.openqa.selenium.WebDriver;
 import page.Home;
-import reportes.EstadoPrueba;
-import reportes.PdfBciReports;
+import xml.LeerPasos;
 
-import java.sql.Driver;
+import java.util.List;
+
 
 public class StepCotizacion {
 
+    LeerPasos xml = new LeerPasos();
     WebDriver driver = DriverContext.getDriver();
+    Home home;
 
-    @Given("^usuario realiza busqueda de producto \"([^\"]*)\"$")
-    public void usuarioRealizaBusquedaDeProducto(String producto) {
-        Home home = new Home();
-        home.buscarProducto(producto);
-
+    @Given("^el usuario ingresa a la pagina de PCFactory \"([^\"]*)\"$")
+    public void elUsuarioIngresaALaPaginaDePCFactory(String url) {
 
     }
-
-
 }
