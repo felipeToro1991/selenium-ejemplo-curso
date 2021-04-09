@@ -22,10 +22,10 @@ public class Home {
     public WebElement btnSearch;
 
 
-    public void buscarProducto(String producto) {
-        inputSearch.sendKeys(producto);
+    public void buscarProducto(String tipoProducto) {
+        inputSearch.sendKeys(tipoProducto);
         PdfBciReports.addWebReportImage(
-                "Pagina principal con ingreso del producto", "Ingreso del producto: " + producto,
+                "Pagina principal con ingreso del producto", "Ingreso del producto: " + tipoProducto,
                 EstadoPrueba.PASSED, false);
         btnSearch.click();
     }

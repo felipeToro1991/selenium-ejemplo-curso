@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import reportes.EstadoPrueba;
 import reportes.PdfBciReports;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -36,17 +37,17 @@ public class Producto {
     @FindBy(xpath = "//div [@class='ficha_precio_normal'] //h2")
     public WebElement precioNormal;
 
-    public List<String> extraerTextos(List<String> datos){
-
+    public List<String> extraerTextos(){
         idProducto = id.getText();
         nombreProducto = nombre.getText();
         marcaProducto = marca.getText();
         precioNormalProducto = precioNormal.getText();
         precioEfectivoProducto = precioEfectivo.getText();
 
-        PdfBciReports.addWebReportImage(
+        ArrayList<String> datos = new ArrayList();
+        /*PdfBciReports.addWebReportImage(
                 "Pagina detalle del producto", "Detalles del producto",
-                EstadoPrueba.PASSED, false);
+                EstadoPrueba.PASSED, false);*/
         datos.add(idProducto);
         datos.add(nombreProducto);
         datos.add(marcaProducto);
@@ -59,6 +60,10 @@ public class Producto {
     public String extraerUrl(){
         url = driver.getCurrentUrl();
         return url;
+    }
+
+    public String extraerId(){
+        return id.getText();
     }
 
 

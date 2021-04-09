@@ -5,7 +5,7 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = {""},
+@CucumberOptions(tags = {"@Navegador"},
         glue = {"stepDefinition"},
         features = "./src/test/java/feature/",
         plugin = {"pretty", "json:target/ReportJson/LocalChromecucumber.json"})
