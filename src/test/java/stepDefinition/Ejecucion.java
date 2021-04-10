@@ -15,7 +15,7 @@ public class Ejecucion {
     @After
     public static void tearDown(){
         PdfBciReports.closePDF();
-        DriverContext.quitDriver();
+        /*DriverContext.quitDriver();*/
     }
 
 }

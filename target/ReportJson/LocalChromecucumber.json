@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 101522200,
+              "duration": 102356800,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 6785609200,
+              "duration": 6171327600,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3166987700,
+              "duration": 3303676800,
               "status": "passed"
             },
             "line": 5,
@@ -52,7 +52,7 @@
           },
           {
             "result": {
-              "duration": 47552459000,
+              "duration": 45952261000,
               "status": "passed"
             },
             "line": 6,
@@ -154,6 +154,18 @@
               }
             ],
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 106853100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "se verifica que los productos se han agregado al carrito correctamente",
+            "match": {
+              "location": "StepCotizacion.seVerificaQueLosProductosSeHanAgregadoAlCarritoCorrectamente()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [

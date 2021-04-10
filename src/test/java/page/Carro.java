@@ -1,6 +1,9 @@
 package page;
 
+import db.Conexion;
+import db.Consultas;
 import drivers.DriverContext;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +11,9 @@ import org.openqa.selenium.support.PageFactory;
 import reportes.EstadoPrueba;
 import reportes.PdfBciReports;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Carro {
@@ -17,33 +23,43 @@ public class Carro {
     String descripcionProducto;
     String precioEfectivoProducto;
 
+    Conexion conexion;
+    Carro carro;
+    Consultas sql;
+    List<String> datosPagina;
+    List<String> datosDb;
+
+
     public Carro() {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[@id='search']")
-    public WebElement inputSearch;
-    @FindBy(xpath = "//*[@id='search_btn']")
-    public WebElement btnSearch;
 
     @FindBy(xpath = "//div [@class='caluga-left-id'] /p")
-    public WebElement id;
+    public List<WebElement> listaId;
     @FindBy(xpath = "//div [@id='enunciado-caluga']  //h1")
     public WebElement descripcion;
     @FindBy(xpath = "//p [@id='producto_precio']")
     public WebElement precioEfectivo;
 
-    public List<String> extraerTextos(List<String> datos){
+    public List<String> extraerTextos(){
+        List<String> id = new ArrayList<>();
+        for(WebElement s : listaId){
+            id.add(s.getText());
+        }
+        return id;
+    }
 
-        idProducto = id.getText();
-        precioEfectivoProducto = precioEfectivo.getText();
+    public void seValidaProductosDelCarrito(){
+        conexion = new Conexion();
+        sql = new Consultas();
+        carro = new Carro();
 
-        PdfBciReports.addWebReportImage(
-                "Pagina carrito", "Detalles del carrito",
-                EstadoPrueba.PASSED, true);
-        datos.add(idProducto);
-        datos.add(precioEfectivoProducto);
-        return datos;
+        datosPagina = carro.extraerTextos();
+        datosDb = sql.consultaID();
+        Collections.sort(datosPagina);
+        Collections.sort(datosDb);
+        Assert.assertEquals("Las listas no son iguales", datosPagina, datosDb);
     }
 
 }

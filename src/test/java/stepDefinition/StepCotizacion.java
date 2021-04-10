@@ -7,6 +7,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import drivers.DriverContext;
+import gherkin.lexer.Ca;
+import page.Carro;
 import page.Home;
 import page.Producto;
 import page.ResultadoBusqueda;
@@ -19,6 +21,7 @@ public class StepCotizacion {
     Home home;
     ResultadoBusqueda resultadoBusqueda;
     Producto producto;
+    Carro carro;
 
     int i;
 
@@ -44,5 +47,7 @@ public class StepCotizacion {
 
     @Then("se verifica que los productos se han agregado al carrito correctamente")
     public void seVerificaQueLosProductosSeHanAgregadoAlCarritoCorrectamente() {
+        carro = new Carro();
+        carro.seValidaProductosDelCarrito();
     }
 }

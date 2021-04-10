@@ -33,6 +33,21 @@ public class Consultas extends Conexion {
         }
     }
 
+    public List<String> consultaID(){
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet result = statement.executeQuery("SELECT idProductos FROM productos;");
+            List<String> id = new ArrayList<>();
+            while (result.next()){
+                id.add(result.getString("idProductos"));
+            }
+            return id;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            return null;
+        }
+    }
+
 
 
 
