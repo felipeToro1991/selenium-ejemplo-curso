@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 102356800,
+              "duration": 97648900,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 6171327600,
+              "duration": 6826641900,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3303676800,
+              "duration": 3138667500,
               "status": "passed"
             },
             "line": 5,
@@ -52,13 +52,13 @@
           },
           {
             "result": {
-              "duration": 45952261000,
+              "duration": 42572099000,
               "status": "passed"
             },
             "line": 6,
-            "name": "el usuario busca y selecciona el producto",
+            "name": "el usuario busca y selecciona los productos",
             "match": {
-              "location": "StepCotizacion.elUsuarioBuscaYSeleccionaElProducto(DataTable)"
+              "location": "StepCotizacion.elUsuarioBuscaYSeleccionaLosProductos(DataTable)"
             },
             "rows": [
               {
@@ -157,7 +157,7 @@
           },
           {
             "result": {
-              "duration": 106853100,
+              "duration": 104029800,
               "status": "passed"
             },
             "line": 21,

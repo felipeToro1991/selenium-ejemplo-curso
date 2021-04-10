@@ -27,7 +27,7 @@ public class ResultadoBusqueda {
         for (WebElement l : listadoNombreProductos) {
             if (l.getText().equals(nombreProducto)) {
                 PdfBciReports.addWebReportImage(
-                        "Pagina resultados de busqueda de producto", "Selecion del producto",
+                        "Pagina resultados de busqueda de producto", "Selecion del producto: " + nombreProducto,
                         EstadoPrueba.PASSED, false);
                 l.click();
                 break;

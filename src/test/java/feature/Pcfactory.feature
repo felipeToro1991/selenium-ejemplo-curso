@@ -3,7 +3,7 @@ Feature: Proceso cotizacion PC gamer
   @Navegador
   Scenario: Cotizacion de productos Pcfactory
     Given el usuario ingresa a la pagina de PCFactory "https://www.pcfactory.cl/"
-    And el usuario busca y selecciona el producto
+    And el usuario busca y selecciona los productos
 
       | TipoProducto     | nombreProducto                                                      |
       | Procesador       | CPU Core i9-10900K 3.7GHz 20MB (1200)                               |

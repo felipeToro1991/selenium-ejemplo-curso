@@ -60,7 +60,7 @@ public class Producto {
 
         ArrayList<String> datos = new ArrayList();
         PdfBciReports.addWebReportImage(
-                "Pagina detalle del producto", "Detalles del producto",
+                "Pagina detalle del producto", "Detalles del producto: " + nombreProducto,
                 EstadoPrueba.PASSED, false);
         datos.add(idProducto);
         datos.add(nombreProducto);
