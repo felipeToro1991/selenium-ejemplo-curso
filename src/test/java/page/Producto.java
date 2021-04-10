@@ -45,9 +45,9 @@ public class Producto {
         precioEfectivoProducto = precioEfectivo.getText();
 
         ArrayList<String> datos = new ArrayList();
-        /*PdfBciReports.addWebReportImage(
+        PdfBciReports.addWebReportImage(
                 "Pagina detalle del producto", "Detalles del producto",
-                EstadoPrueba.PASSED, false);*/
+                EstadoPrueba.PASSED, false);
         datos.add(idProducto);
         datos.add(nombreProducto);
         datos.add(marcaProducto);

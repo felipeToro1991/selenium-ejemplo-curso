@@ -3,16 +3,38 @@
     "line": 1,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 98969700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Ejecucion.config()"
+            }
+          }
+        ],
         "line": 4,
         "name": "Cotizacion de productos Pcfactory",
         "description": "",
         "id": "proceso-cotizacion-pc-gamer;cotizacion-de-productos-pcfactory",
+        "after": [
+          {
+            "result": {
+              "duration": 6769322600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Ejecucion.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3213037300,
+              "duration": 3140970400,
               "status": "passed"
             },
             "line": 5,
@@ -30,46 +52,194 @@
           },
           {
             "result": {
-              "duration": 1313485800,
+              "duration": 988218700,
               "status": "passed"
             },
             "line": 6,
-            "name": "el usuario busca el producto \"Procesador\"",
+            "name": "el usuario busca el producto",
             "match": {
-              "arguments": [
-                {
-                  "val": "Procesador",
-                  "offset": 30
-                }
-              ],
-              "location": "StepCotizacion.elUsuarioBuscaElProducto(String)"
+              "location": "StepCotizacion.elUsuarioBuscaElProducto(DataTable)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "TipoProducto"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "Procesador"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Audifono Gamer"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "Memoria Ram"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Fuente de poder"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Gabinete"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Placa Madre"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Monitor Gamer"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Mouse Gamer"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Teclado Gamer"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Memoria SSD"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "Tarjeta de video"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "Watercooling"
+                ],
+                "line": 20
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2748410300,
+              "duration": 1224830100,
               "status": "passed"
             },
-            "line": 7,
-            "name": "el usuario seleciona el producto \"CPU Core i9-10900K 3.7GHz 20MB (1200)\"",
+            "line": 22,
+            "name": "el usuario seleciona el producto",
             "match": {
-              "arguments": [
-                {
-                  "val": "CPU Core i9-10900K 3.7GHz 20MB (1200)",
-                  "offset": 34
-                }
-              ],
-              "location": "StepCotizacion.elUsuarioSelecionaElProducto(String)"
+              "location": "StepCotizacion.elUsuarioSelecionaElProducto(DataTable)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "nombreProducto"
+                ],
+                "line": 23
+              },
+              {
+                "cells": [
+                  "CPU Core i9-10900K 3.7GHz 20MB (1200)"
+                ],
+                "line": 24
+              },
+              {
+                "cells": [
+                  "Audífono SoundBlaster H3"
+                ],
+                "line": 25
+              },
+              {
+                "cells": [
+                  "DDR4 8GB 2666MHz Value RAM"
+                ],
+                "line": 26
+              },
+              {
+                "cells": [
+                  "Fuente Poder 750W Focus GX Plus 80Plus Gold Full Modular"
+                ],
+                "line": 27
+              },
+              {
+                "cells": [
+                  "Gabinete E-ATX Winbot"
+                ],
+                "line": 28
+              },
+              {
+                "cells": [
+                  "M/B AMD TRX40-XE ROG Strix Gaming (TRX4)"
+                ],
+                "line": 29
+              },
+              {
+                "cells": [
+                  "Monitor Gamer 23,6\" KG241Q-P, Panel TN, 144 Hz, 1ms, FreeSync, HDMI"
+                ],
+                "line": 30
+              },
+              {
+                "cells": [
+                  "Mouse Gamer G604 Lightspeed Wireless-Bluetooth Negro"
+                ],
+                "line": 31
+              },
+              {
+                "cells": [
+                  "Teclado Gamer G513  RGB Lightsync USB Mecánico Español"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "Unidad SSD 1TB PCIe NVMe Gen4 M.2 SN850 Black"
+                ],
+                "line": 33
+              },
+              {
+                "cells": [
+                  "Video AMD Radeon RX 6900XT O16G ROG Strix LC"
+                ],
+                "line": 34
+              },
+              {
+                "cells": [
+                  "Watercooling SR36"
+                ],
+                "line": 35
+              }
+            ],
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 546716000,
+              "duration": 946665600,
               "status": "passed"
             },
-            "line": 8,
+            "line": 36,
             "name": "se valida que el producto sea el correcto",
             "match": {
               "location": "StepCotizacion.seValidaQueElProductoSeaElCorrecto()"

@@ -26,10 +26,10 @@ public class ResultadoBusqueda {
 
         for (WebElement l : listadoNombreProductos) {
             if (l.getText().equals(nombreProducto)) {
-                l.click();
-                /*PdfBciReports.addWebReportImage(
+                PdfBciReports.addWebReportImage(
                         "Pagina resultados de busqueda de producto", "Selecion del producto",
-                        EstadoPrueba.PASSED, false);*/
+                        EstadoPrueba.PASSED, false);
+                l.click();
                 break;
             }
         }

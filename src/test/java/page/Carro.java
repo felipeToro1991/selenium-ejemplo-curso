@@ -38,9 +38,9 @@ public class Carro {
         idProducto = id.getText();
         precioEfectivoProducto = precioEfectivo.getText();
 
-        /*PdfBciReports.addWebReportImage(
+        PdfBciReports.addWebReportImage(
                 "Pagina carrito", "Detalles del carrito",
-                EstadoPrueba.PASSED, true);*/
+                EstadoPrueba.PASSED, true);
         datos.add(idProducto);
         datos.add(precioEfectivoProducto);
         return datos;

@@ -1,6 +1,8 @@
 package stepDefinition;
 
+
 import constants.Navegador;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import db.Conexion;
@@ -31,21 +33,28 @@ public class StepCotizacion {
     List<String> datosDb;
     String [] datosExcel;
 
+    int i;
+
     @Given("^el usuario ingresa a la pagina de PCFactory \"([^\"]*)\"$")
     public void elUsuarioIngresaALaPaginaDePCFactory(String url) {
         DriverContext.setUp(Navegador.Chrome, url);
     }
 
-    @And("^el usuario busca el producto \"([^\"]*)\"$")
-    public void elUsuarioBuscaElProducto(String tipoProducto) {
+    @And("^el usuario busca el producto$")
+    public void elUsuarioBuscaElProducto(DataTable dataTable) {
         home = new Home();
-        home.buscarProducto(tipoProducto);
+        List<String> dato = dataTable.asList(String.class);
+        for (i = 1; i <= dato.size() ; i++) {
+            home.buscarProducto(dato.get(i));
+            break;
+        }
     }
 
-    @And("^el usuario seleciona el producto \"([^\"]*)\"$")
-    public void elUsuarioSelecionaElProducto(String nombreProducto) {
+    @And("el usuario seleciona el producto")
+    public void elUsuarioSelecionaElProducto(DataTable dataTable) {
         resultadoBusqueda = new ResultadoBusqueda();
-        resultadoBusqueda.selecionarProducto(nombreProducto);
+        List<String> dato = dataTable.asList(String.class);
+        resultadoBusqueda.selecionarProducto(dato.get(i));
     }
 
     @And("se valida que el producto sea el correcto")
