@@ -4,6 +4,10 @@ import constants.Navegador;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import drivers.DriverContext;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 import reportes.EstadoPrueba;
 import reportes.PdfBciReports;
 import xml.LeerPasos;
@@ -19,7 +23,7 @@ public class Ejecucion {
         List<String> url = xml.getxmlSucursalVirtual("Url", "PCFactory");
         DriverContext.setUp(Navegador.Chrome, url.get(1));
         String urlWeb = DriverContext.getDriver().getCurrentUrl();
-        PdfBciReports.createPDF();
+        //PdfBciReports.createPDF();
 
         /*if(urlWeb.equals(url.get(1))){
             PdfBciReports.addWebReportImage("Levantamiento de navegador", "levantamiento de navegador en la pagina :"+url, EstadoPrueba.PASSED, false);
@@ -29,7 +33,7 @@ public class Ejecucion {
     }
     @After
     public static void tearDown(){
-        PdfBciReports.closePDF();
-        //DriverContext.quitDriver();
+        //PdfBciReports.closePDF();
+        DriverContext.quitDriver();
     }
 }
