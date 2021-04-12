@@ -45,3 +45,4 @@ src/main/resources/.DS_Store
 tmp/*.pdf
 tmp/temporalFile
 tmp/*
+selenium-ejemplo-curso.iml
