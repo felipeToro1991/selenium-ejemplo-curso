@@ -12,12 +12,10 @@ selenium-ejemplo-curso.iml
 /.idea/workspace.xml
 
 #Proyect Files
-/.gradle
-/gradle
-.gradle/*
+/.target
+/target
+.target/*
 /bin
-/android-results
-/ios-results
 /web-results
 
 #Resultado Gherkin Octane
