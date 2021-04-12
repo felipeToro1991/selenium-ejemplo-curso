@@ -1,7 +1,52 @@
-LogoBCI.png
-tmp
-ReportesExcel
-DataXml
-build
-drivers
-.idea
+#Allure Files
+/allure-report
+/allure-results
+gradlew
+gradlew.bat
+selenium-ejemplo-curso.iml
+
+#IDEA Files
+/.idea
+.idea/*
+/out
+/.idea/workspace.xml
+
+#Proyect Files
+/.gradle
+/gradle
+.gradle/*
+/bin
+/android-results
+/ios-results
+/web-results
+
+#Resultado Gherkin Octane
+/gherkin-results
+gherkin-results/
+gherkin-results/*
+
+#BCI Files
+DriverNavegador/
+/DriverNavegador
+DriverNavegador/*
+apps/
+*.iml
+*.apk
+*.ipa
+*.app
+*.pdf
+/apps
+
+#Others Files
+/build
+*.zip
+*.png
+/.DS_Store
+DS_Store
+src/.DS_Store
+src/main/.DS_Store
+src/test/.DS_Store
+src/main/resources/.DS_Store
+tmp/*.pdf
+tmp/temporalFile
+tmp/*
