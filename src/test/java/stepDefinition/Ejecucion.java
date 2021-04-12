@@ -21,11 +21,11 @@ public class Ejecucion {
         String urlWeb = DriverContext.getDriver().getCurrentUrl();
         PdfBciReports.createPDF();
 
-        /*if(urlWeb.equals(url.get(1))){
+        if(urlWeb.equals(url.get(1))){
             PdfBciReports.addWebReportImage("Levantamiento de navegador", "levantamiento de navegador en la pagina :"+url, EstadoPrueba.PASSED, false);
         }else{
             PdfBciReports.addWebReportImage("Levantamiento de navegador", "levantamiento de navegador en la pagina no fue correcto se cargo la URL:"+urlWeb, EstadoPrueba.FAILED, true);
-        }*/
+        }
     }
     @After
     public static void tearDown(){
