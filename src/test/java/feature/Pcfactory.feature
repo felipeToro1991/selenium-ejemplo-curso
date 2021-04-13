@@ -12,11 +12,11 @@ Feature: Proceso cotizacion PC gamer
       |fuentes poder        |Fuente de Poder 650W 80Plus Bronze           |
       |gabinete             |Gabinete ATX Talos M1A                       |
       |monitor gamer        |Monitor Gamer 21,5" VP228HE 1 ms             |
-      |teclado              |Teclado Gamer K55 RGB Membrana Español USB   |
-      |mouse                |Mouse Gamer Rival 3 USB                      |
-      |audifonos            |Audífono Gamer GXT 450 Blizz RGB 7.1 Surround|
-      And se guarda la informacion del producto agregando a cotizacion
-      Then se valida el producto en cotizacion
+      |teclado gamer        |Teclado Gamer K55 RGB Membrana Español USB   |
+      |mouse gamer          |Mouse Gamer Rival 3 USB                      |
+      |audifonos gamer      |Audífono Gamer GXT 450 Blizz RGB 7.1 Surround|
+      #And se guarda la informacion del producto agregando a cotizacion
+      #Then se valida el producto en cotizacion
 
 
 

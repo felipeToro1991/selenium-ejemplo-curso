@@ -40,4 +40,12 @@ public class ResultadoBusquedaPO {
             return false;
         }
     }
+
+    /*public Boolean ExisteProducto(String producto){
+        if(){
+
+        }
+
+
+    }*/
 }
