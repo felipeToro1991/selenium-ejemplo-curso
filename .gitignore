@@ -24,13 +24,11 @@ gherkin-results/*
 DriverNavegador/
 /DriverNavegador
 DriverNavegador/*
-apps/
-*.iml
+**/*.iml
 *.apk
 *.ipa
 *.app
 *.pdf
-/apps
 
 #Others Files
 /build
@@ -45,4 +43,3 @@ src/main/resources/.DS_Store
 tmp/*.pdf
 tmp/temporalFile
 tmp/*
-selenium-ejemplo-curso.iml
