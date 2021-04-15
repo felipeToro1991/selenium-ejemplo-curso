@@ -15,15 +15,8 @@
 /bin
 /web-results
 
-#Resultado Gherkin Octane
-/gherkin-results
-gherkin-results/
-gherkin-results/*
-
 #BCI Files
-DriverNavegador/
-/DriverNavegador
-DriverNavegador/*
+src/main/*
 **/*.iml
 *.apk
 *.ipa
@@ -43,3 +36,4 @@ src/main/resources/.DS_Store
 tmp/*.pdf
 tmp/temporalFile
 tmp/*
+selenium-ejemplo-curso.iml
