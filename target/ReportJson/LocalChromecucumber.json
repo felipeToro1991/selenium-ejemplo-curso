@@ -1,0 +1,185 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 97648900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Ejecucion.config()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Cotizacion de productos Pcfactory",
+        "description": "",
+        "id": "proceso-cotizacion-pc-gamer;cotizacion-de-productos-pcfactory",
+        "after": [
+          {
+            "result": {
+              "duration": 6826641900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Ejecucion.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3138667500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "el usuario ingresa a la pagina de PCFactory \"https://www.pcfactory.cl/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.pcfactory.cl/",
+                  "offset": 45
+                }
+              ],
+              "location": "StepCotizacion.elUsuarioIngresaALaPaginaDePCFactory(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 42572099000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "el usuario busca y selecciona los productos",
+            "match": {
+              "location": "StepCotizacion.elUsuarioBuscaYSeleccionaLosProductos(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "TipoProducto",
+                  "nombreProducto"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "Procesador",
+                  "CPU Core i9-10900K 3.7GHz 20MB (1200)"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Audifono Gamer",
+                  "Audífono SoundBlaster H3"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "Memoria Ram",
+                  "DDR4 8GB 2666MHz Value RAM"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Fuente de poder",
+                  "Fuente Poder 750W Focus GX Plus 80Plus Gold Full Modular"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Gabinete",
+                  "Gabinete E-ATX Winbot"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Placa Madre",
+                  "M/B AMD TRX40-XE ROG Strix Gaming (TRX4)"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Monitor Gamer",
+                  "Monitor Gamer 23,6\" KG241Q-P, Panel TN, 144 Hz, 1ms, FreeSync, HDMI"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Mouse Gamer",
+                  "Mouse Gamer G604 Lightspeed Wireless-Bluetooth Negro"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Teclado Gamer",
+                  "Teclado Gamer Centurion Mecánico"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "SSD",
+                  "Unidad SSD 1TB PCIe NVMe Gen4 M.2 SN850 Black"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "Tarjeta de video",
+                  "Video AMD Radeon RX 6900XT O16G ROG Strix LC"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "Watercooling",
+                  "Watercooling SR36"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 104029800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "se verifica que los productos se han agregado al carrito correctamente",
+            "match": {
+              "location": "StepCotizacion.seVerificaQueLosProductosSeHanAgregadoAlCarritoCorrectamente()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Navegador"
+          }
+        ]
+      }
+    ],
+    "name": "Proceso cotizacion PC gamer",
+    "description": "",
+    "id": "proceso-cotizacion-pc-gamer",
+    "keyword": "Feature",
+    "uri": "Pcfactory.feature"
+  }
+]
